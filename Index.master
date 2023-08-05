@@ -1,0 +1,164 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Index.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+<body class="is-preload">
+    <form id="form1" runat="server">
+        <div id="wrapper">
+
+            <!-- Main -->
+            <div id="main">
+                <div class="inner">
+
+                    <!-- Header -->
+                    <header id="header">
+                        <a href="frm_MainPage.aspx" class="logo"><strong>Student Progress</strong></a>
+                        <ul class="icons">
+                            <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                            <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                            <li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+                            <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                            <li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+                        </ul>
+                    </header>
+
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                    <!-- Sidebar -->
+                    <div id="sidebar">
+                        <div class="inner">
+
+                            <!-- Search -->
+                    <%--        <section id="search" class="alt">
+                                <form method="post" action="#">
+                                    <input type="text" name="query" id="query" placeholder="Search" />
+                                </form>
+                            </section>--%>
+
+                            <!-- Menu -->
+                            <nav id="menu" runat="server">
+                                <header class="major">
+                                    <h2>Menu</h2>
+                                </header>
+                                <!-- Menu To Be Copied for admin and other all Designations starts from here -->
+                                <!-- Student Menu -->
+                                <ul id="mnuStud" runat="server" visible="false">
+                                    <li><a href="frm_StudentDetailsUpdate.aspx">Home</a></li>
+                                    <li><a href="frm_MarksReporting.aspx">University Progress</a></li>
+                                    <li><a href="frm_ExamChart.aspx">College Progress</a></li>
+                                    <li><a href="frm_StudentDetailsUpdate.aspx">Profile</a></li>
+                                     <li><a href="frm_PasswordForget.aspx">Change Password</a></li>
+                                    <li><a href="frm_AccountDeleteStudent.aspx">Delete Account</a></li>
+                                    <li><a href="frm_Logout.aspx">Log Out</a></li>
+                                </ul>
+                                <!-- Staff Menu -->
+                                <ul id="mnuStaff" runat="server" visible="false">
+                                     <li><a href="frm_StaffDetailsUpdate.aspx">Home</a></li>
+                                    
+                                    <li><a href="frm_Attendance.aspx">Attendance</a></li>
+                                    <li><a href="frm_ChooseTest.aspx">Marks Entry</a></li>
+                                    <li><a href="frm_PromoteStudents.aspx">Promote Students</a></li>
+                                    <li><a href="frm_PasswordForget.aspx">Change Password</a></li>
+                                    <li><a href="frm_StaffDetailsUpdate.aspx">Profile</a></li>
+                                    <li><a href="frm_AccountDeleteStaff.aspx">Delete Account</a></li>
+                                    <li><a href="frm_Logout.aspx">Log Out</a></li>
+                                </ul>
+                                <!-- Institute Menu -->
+                                <ul id="mnuInstitute" runat="server" visible="false">
+                                    <li id="adminhome" runat="server" visible="false"><a href="frm_MainAdmin.aspx">Home</a></li>
+                                    <li id="insthome" runat="server"><a href="frm_MainInstituteAdmin.aspx">Home</a></li>
+                                    <li><a href="frm_StaffApproval.aspx">Approve Staff</a></li>
+                                    <li><a href="frm_AddTest_Admin.aspx">Add Test</a></li>
+                                    <li><a href="frm_AddCourse.aspx">Add Course</a></li>
+                                    <li><a href="frm_AddDivison.aspx">Add Division</a></li>
+                                    <li><a href="frm_AddSubject.aspx">Add Subjects</a></li>
+                                    <li><a href="frm_StaffAllocation.aspx">Allocate Subjects</a></li>
+                                    <li><a href="frm_InstituteDetailsUpdate.aspx">Edit Profile</a></li>
+                                    <li>
+											<span class="opener">Institute Community</span>
+											<ul>
+												<li><a href="frm_DisplayStudents_Inst.aspx">Students</a></li>
+												<li><a href="frm_DisplayStaff_Inst.aspx">Staffs</a></li>
+											</ul>
+									</li>
+                                    <li><a href="frm_PasswordForget.aspx">Change Password</a></li>
+                                    <li><a href="frm_Logout.aspx">Log Out</a></li>
+                                </ul>
+                                <!-- Main Admin Menu -->
+                                <ul id="mnuMainAdmin" runat="server" visible="false">
+                                    <li><a href="frm_MainAdmin.aspx">Home</a></li>
+                                    <li><a href="frm_AddDegreeAdmin.aspx">Add Degree</a></li>
+                                    <li><a href="frm_DisplayStaff.aspx">Manage Staffs</a></li>
+                                    <li><a href="frm_DisplayStudents.aspx">Manage Students</a></li>
+                                    <li><a href="frm_CreateMainAdmin.aspx">Create Admin</a></li>
+                                    <li>
+											<span class="opener">Register</span>
+											<ul>
+												<li><a href="frm_SignUp_for_students.aspx">Register Student</a></li>
+												<li><a href="frm_SignUp_for_staff.aspx">Register Staff</a></li>
+												<li><a href="frm_Institute.aspx">Register Institute</a></li>
+											</ul>
+									</li>
+                                    <li><a href="frm_PasswordForget.aspx">Change Password</a></li>
+                                    <li><a href="frm_Logout.aspx">Log Out</a></li>
+                                </ul>
+                                <!-- For Submenu
+                                    <ul id="MenuName" runat="server" visible="false">
+										<li>
+											<span class="opener">Submenu</span>
+											<ul>
+												<li><a href="#">Lorem Dolor</a></li>
+												<li><a href="#">Ipsum Adipiscing</a></li>
+												<li><a href="#">Tempus Magna</a></li>
+												<li><a href="#">Feugiat Veroeros</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Etiam Dolore</a></li>
+										<li><a href="#">Adipiscing</a></li>
+										<li><a href="#">Maximus Erat</a></li>
+										<li><a href="#">Sapien Mauris</a></li>
+										<li><a href="#">Amet Lacinia</a></li>
+									</ul>
+                                    -->
+                            </nav>
+
+                            <!-- Section -->
+                            <section>
+                                <header class="major">
+                                    <h2>Get in touch</h2>
+                                </header>
+                                <ul class="contact">
+                                    <li class="icon solid fa-envelope"><a href="#">202212061@daiict.ac.in</a></li>
+                                    <li class="icon solid fa-envelope"><a href="#">202212123@daiict.ac.in</a></li>
+                                    <li class="icon solid fa-phone">7016914693</li>
+                                    <li class="icon solid fa-phone">9558441976</li>
+                                    <li class="icon solid fa-home">Gandhinagar</li>
+                                </ul>
+                            </section>
+
+                            <!-- Footer -->
+                            <footer id="footer">
+                                <p class="copyright">&copy; <a href="frm_MainPage.aspx">Student Progress.</a><br />Darsh Doshi<br />Karan Vaghela<br /> All rights reserved.</p>
+                            </footer>
+
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                            </asp:ContentPlaceHolder>
+
+                            <script src="js/jquery.min.js"></script>
+                            <script src="js/browser.min.js"></script>
+                            <script src="js/breakpoints.min.js"></script>
+                            <script src="js/util.js"></script>
+                            <script src="js/main.js"></script>
+    </form>
+</body>
+</html>

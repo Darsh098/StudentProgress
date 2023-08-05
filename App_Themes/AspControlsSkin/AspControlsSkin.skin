@@ -1,0 +1,6 @@
+﻿<asp:TextBox SkinID="TB_Skin" runat="server" Font-Size="12" valign="center"></asp:TextBox>
+<asp:RequiredFieldValidator SkinID="RFV_Skin" runat="server" Display="Dynamic" Font-Size="15px" ForeColor="Red"></asp:RequiredFieldValidator>
+<asp:CompareValidator SkinID="CV_Skin" runat="server"  ErrorMessage="Password Must Be Same" Display="Dynamic" Font-Size="15px" ForeColor="Red"></asp:CompareValidator>
+<asp:Button SkinID="BTN_Skin" runat="server" BackColor="#14213D" Font-Size="14" ForeColor="#FCA311"></asp:Button>
+<asp:Image SkinID="IMG_Skin" runat="server" AlternateText="Image Not Found" Height="200"></asp:Image>
+<asp:DropDownList SkinID="DDL_Skin" runat="server" Width="60%"></asp:DropDownList>
